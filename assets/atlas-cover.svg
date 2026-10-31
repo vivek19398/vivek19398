@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640" role="img" aria-labelledby="title desc">
+<title id="title">The Atlas Drifter — Vivek Ranjan</title>
+<desc id="desc">A celestial atlas in antique gold above an obsidian ocean. Worlds built from curiosity. Senior Software Engineer, Dublin, Ireland.</desc>
+<defs>
+<radialGradient id="sky" cx=".78" cy=".43" r=".8"><stop stop-color="#1b303c"/><stop offset=".5" stop-color="#0c171f"/><stop offset="1" stop-color="#070b10"/></radialGradient>
+<linearGradient id="gold" x2="1" y2="1"><stop stop-color="#f1dfb3"/><stop offset=".5" stop-color="#bda16d"/><stop offset="1" stop-color="#61563f"/></linearGradient>
+<linearGradient id="sea" x2="0" y2="1"><stop stop-color="#172c36"/><stop offset="1" stop-color="#070b10"/></linearGradient>
+</defs>
+<rect width="1440" height="640" fill="url(#sky)"/>
+<g fill="#d8c397" opacity=".65"><circle cx="744" cy="91" r="1.5"/><circle cx="1320" cy="133" r="2"/><circle cx="864" cy="54" r="1"/><circle cx="1204" cy="66" r="1"/><circle cx="690" cy="213" r="1"/><circle cx="1354" cy="317" r="1"/><circle cx="940" cy="130" r="1"/><circle cx="109" cy="143" r="1"/></g>
+<g transform="translate(1090 296)" stroke="url(#gold)" fill="none">
+<circle r="207" opacity=".2"/><circle r="183" stroke-width="1.5" opacity=".65"/><circle r="151" opacity=".35"/>
+<ellipse rx="183" ry="68" transform="rotate(-31)" opacity=".7"/>
+<ellipse rx="77" ry="183" transform="rotate(24)" opacity=".6"/>
+<path d="M0-221V221M-221 0H221" opacity=".22"/>
+<path d="M0-163 25-31 144 0 25 27 0 163-25 27-144 0-25-31Z" opacity=".7"/>
+<path d="m0-87 12 75 75 12-75 12-12 75-12-75-75-12 75-12Z" fill="#c4ac7c" opacity=".16"/>
+<circle r="9" fill="#dfc48e" stroke="none"/>
+</g>
+<path d="M0 498Q230 467 430 500T860 493T1440 490V640H0Z" fill="url(#sea)"/>
+<g fill="none" stroke="#a99060" opacity=".1"><path d="M755 540h580M836 554h441M934 568h249M1016 581h85"/><path d="M66 608H1374"/></g>
+<path d="M66 50H1374" stroke="#bba16c" opacity=".35"/>
+<text x="70" y="86" fill="#c8b180" font-family="Arial,sans-serif" font-size="15" letter-spacing="5">VIVEK RANJAN / THE ATLAS DRIFTER</text>
+<text x="70" y="221" fill="#a7b4b8" font-family="Arial,sans-serif" font-size="16" letter-spacing="4">ENGINEER. BUILDER. EXPLORER.</text>
+<g fill="#eee7d8" font-family="Georgia,serif" font-size="78"><text x="66" y="321">Worlds built</text><text x="66" y="411">from <tspan fill="#d5ba83" font-style="italic">curiosity.</tspan></text></g>
+<text x="70" y="471" fill="#b0bdc3" font-family="Arial,sans-serif" font-size="20">Intelligent systems. Thoughtful tools. Shared tables.</text>
+<text x="70" y="577" fill="#ccb583" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">SENIOR SOFTWARE ENGINEER</text>
+<text x="1370" y="577" text-anchor="end" fill="#a7b4b8" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">DUBLIN, IRELAND</text>
+</svg>
