@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPanel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1820" />
+      <stop offset="50%" stop-color="#080e13" />
+      <stop offset="100%" stop-color="#050507" />
+    </linearGradient>
+
+    <linearGradient id="cardLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14252d" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b141a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="cardRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2430" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b1218" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbb386" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#cbb386" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#dec79b" stop-opacity="0.45" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .serif-head {
+      font-family: 'Cinzel', 'Georgia', 'Times New Roman', serif;
+      fill: #f0ebdc;
+    }
+    .serif-em {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-style: italic;
+      fill: #dec79b;
+    }
+    .mono-tag {
+      font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+      letter-spacing: 2px;
+      fill: #cbb386;
+      text-transform: uppercase;
+    }
+    .mono-code {
+      font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+      fill: #ede7da;
+    }
+    .sans-desc {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      fill: #b5c1c0;
+    }
+    @keyframes pulseFlow {
+      to { stroke-dashoffset: -80; }
+    }
+    .flow-line {
+      stroke-dasharray: 6 6;
+      animation: pulseFlow 4s linear infinite;
+    }
+  </style>
+
+  <!-- Outer Frame -->
+  <rect width="1200" height="340" rx="8" fill="url(#bgPanel)" stroke="url(#goldStroke)" stroke-width="1.2" />
+
+  <!-- Top Section Header -->
+  <g transform="translate(36, 32)">
+    <text x="0" y="0" class="mono-tag" font-size="10">01 / BEHIND THE BUILD  —  IDEAS, MADE REAL</text>
+    <text x="1128" y="0" text-anchor="end" class="mono-tag" font-size="10" fill="#9eb0b3">BUILT WITH INTENT. MADE TO MATTER.</text>
+    <line x1="0" y1="12" x2="1128" y2="12" stroke="#cbb386" stroke-opacity="0.18" stroke-width="1" />
+  </g>
+
+  <!-- LEFT BLUEPRINT: GRAPHCORE STUDIO -->
+  <g transform="translate(36, 60)">
+    <rect x="0" y="0" width="548" height="252" rx="6" fill="url(#cardLeft)" stroke="#cbb386" stroke-opacity="0.35" stroke-width="1" />
+
+    <!-- Badge & Title -->
+    <text x="24" y="30" class="mono-tag" font-size="9.5" fill="#4ade80">● PYPI PACKAGE  ·  LOCAL-FIRST AI RUNTIME</text>
+    <rect x="348" y="14" width="178" height="22" rx="4" fill="#091116" stroke="#cbb386" stroke-opacity="0.4" />
+    <text x="437" y="28.5" text-anchor="middle" class="mono-code" font-size="9.5" fill="#dec79b">$ pip install graphcore-studio</text>
+
+    <text x="24" y="60" class="serif-head" font-size="24">GraphCore <tspan class="serif-em">Studio</tspan></text>
+    <text x="24" y="82" class="sans-desc" font-size="12.5">
+      Visual AI agent workflow studio backed by a native C++17 graph execution engine.
+    </text>
+
+    <!-- Architecture Pipeline Diagram -->
+    <g transform="translate(24, 102)">
+      <!-- Node 1: Visual Graph UI -->
+      <rect x="0" y="12" width="112" height="58" rx="4" fill="#0d1820" stroke="#cbb386" stroke-opacity="0.5" />
+      <text x="56" y="34" text-anchor="middle" class="mono-code" font-size="10" font-weight="600">VISUAL DAG UI</text>
+      <text x="56" y="49" text-anchor="middle" class="sans-desc" font-size="9">Drag &amp; Drop Nodes</text>
+      <text x="56" y="61" text-anchor="middle" class="sans-desc" font-size="9">Human Checkpoints</text>
+
+      <!-- Connector 1 -> 2 -->
+      <line x1="112" y1="41" x2="142" y2="41" class="flow-line" stroke="#dec79b" stroke-width="1.5" />
+
+      <!-- Node 2: Python Layer -->
+      <rect x="142" y="12" width="118" height="58" rx="4" fill="#0d1820" stroke="#cbb386" stroke-opacity="0.5" />
+      <text x="201" y="34" text-anchor="middle" class="mono-code" font-size="10" font-weight="600">PYTHON ORCH.</text>
+      <text x="201" y="49" text-anchor="middle" class="sans-desc" font-size="9">OpenRouter · Tools</text>
+      <text x="201" y="61" text-anchor="middle" class="sans-desc" font-size="9">Pydantic Schemas</text>
+
+      <!-- Connector 2 -> 3 (C ABI) -->
+      <line x1="260" y1="41" x2="306" y2="41" class="flow-line" stroke="#dec79b" stroke-width="1.5" />
+      <text x="283" y="33" text-anchor="middle" class="mono-tag" font-size="7.5">C ABI</text>
+
+      <!-- Node 3: Native C++17 Engine -->
+      <rect x="306" y="12" width="194" height="58" rx="4" fill="#172c36" stroke="#dec79b" stroke-width="1.3" />
+      <text x="403" y="34" text-anchor="middle" class="mono-code" font-size="10.5" fill="#dec79b" font-weight="600">C++17 GRAPH ENGINE</text>
+      <text x="403" y="49" text-anchor="middle" class="sans-desc" font-size="9" fill="#ede7da">Conditional Routing &amp; State</text>
+      <text x="403" y="61" text-anchor="middle" class="sans-desc" font-size="9" fill="#ede7da">Crash-Recoverable Checkpoints</text>
+    </g>
+
+    <!-- Bottom Tech Tags -->
+    <g transform="translate(24, 198)">
+      <line x1="0" y1="0" x2="500" y2="0" stroke="#cbb386" stroke-opacity="0.16" />
+      <text x="0" y="24" class="mono-tag" font-size="9.5" fill="#cbb386">
+        C++17  ·  PYTHON  ·  CTYPES BRIDGE  ·  OPENROUTER  ·  PYDANTIC  ·  CMAKE  ·  SCIKIT-BUILD-CORE
+      </text>
+    </g>
+  </g>
+
+  <!-- RIGHT BLUEPRINT: ASTRAPDF -->
+  <g transform="translate(616, 60)">
+    <rect x="0" y="0" width="548" height="252" rx="6" fill="url(#cardRight)" stroke="#cbb386" stroke-opacity="0.35" stroke-width="1" />
+
+    <!-- Badge & Title -->
+    <text x="24" y="30" class="mono-tag" font-size="9.5" fill="#4ade80">● PYPI PACKAGE  ·  ZERO-CLOUD PRIVACY</text>
+    <rect x="372" y="14" width="154" height="22" rx="4" fill="#091116" stroke="#cbb386" stroke-opacity="0.4" />
+    <text x="449" y="28.5" text-anchor="middle" class="mono-code" font-size="9.5" fill="#dec79b">$ pip install astrapdf</text>
+
+    <text x="24" y="60" class="serif-head" font-size="24">Astra<tspan class="serif-em">PDF</tspan></text>
+    <text x="24" y="82" class="sans-desc" font-size="12.5">
+      Cross-platform Python PDF toolkit &amp; local web studio — 100% on-device document processing.
+    </text>
+
+    <!-- Architecture Pipeline Diagram -->
+    <g transform="translate(24, 102)">
+      <!-- Node 1: CLI & Web Studio -->
+      <rect x="0" y="12" width="118" height="58" rx="4" fill="#0d1820" stroke="#cbb386" stroke-opacity="0.5" />
+      <text x="59" y="34" text-anchor="middle" class="mono-code" font-size="10" font-weight="600">STUDIO &amp; API</text>
+      <text x="59" y="49" text-anchor="middle" class="sans-desc" font-size="9">CLI: astrapdf</text>
+      <text x="59" y="61" text-anchor="middle" class="sans-desc" font-size="9">API: pdfstudio</text>
+
+      <!-- Connector 1 -> 2 -->
+      <line x1="118" y1="41" x2="152" y2="41" class="flow-line" stroke="#dec79b" stroke-width="1.5" />
+
+      <!-- Node 2: Loopback Server -->
+      <rect x="152" y="12" width="128" height="58" rx="4" fill="#0d1820" stroke="#cbb386" stroke-opacity="0.5" />
+      <text x="216" y="34" text-anchor="middle" class="mono-code" font-size="10" font-weight="600">127.0.0.1 CORE</text>
+      <text x="216" y="49" text-anchor="middle" class="sans-desc" font-size="9">In-Memory Sessions</text>
+      <text x="216" y="61" text-anchor="middle" class="sans-desc" font-size="9">Page-Image Cache</text>
+
+      <!-- Connector 2 -> 3 -->
+      <line x1="280" y1="41" x2="314" y2="41" class="flow-line" stroke="#dec79b" stroke-width="1.5" />
+
+      <!-- Node 3: PDFium Engine -->
+      <rect x="314" y="12" width="186" height="58" rx="4" fill="#212d3d" stroke="#dec79b" stroke-width="1.3" />
+      <text x="407" y="34" text-anchor="middle" class="mono-code" font-size="10.5" fill="#dec79b" font-weight="600">NATIVE PDFIUM ENGINE</text>
+      <text x="407" y="49" text-anchor="middle" class="sans-desc" font-size="9" fill="#ede7da">Merge · Split · Annotate · Crop</text>
+      <text x="407" y="61" text-anchor="middle" class="sans-desc" font-size="9" fill="#ede7da">Lazy Thumbnails &amp; Watermark</text>
+    </g>
+
+    <!-- Bottom Tech Tags -->
+    <g transform="translate(24, 198)">
+      <line x1="0" y1="0" x2="500" y2="0" stroke="#cbb386" stroke-opacity="0.16" />
+      <text x="0" y="24" class="mono-tag" font-size="9.5" fill="#cbb386">
+        PYTHON  ·  PDFIUM  ·  LOOPBACK SERVER  ·  IN-MEMORY PROCESSING  ·  PRIVACY-FIRST
+      </text>
+    </g>
+  </g>
+</svg>

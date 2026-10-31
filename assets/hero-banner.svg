@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="100%">
+  <defs>
+    <!-- Sky & Void Background Gradients -->
+    <radialGradient id="skyGlow" cx="68%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#3d5258" stop-opacity="0.65" />
+      <stop offset="38%" stop-color="#1b2e39" stop-opacity="0.85" />
+      <stop offset="78%" stop-color="#0b131a" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#050507" stop-opacity="1" />
+    </radialGradient>
+
+    <radialGradient id="sunOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5ebd1" stop-opacity="0.9" />
+      <stop offset="35%" stop-color="#dec79b" stop-opacity="0.55" />
+      <stop offset="70%" stop-color="#cbb386" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#cbb386" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbb386" />
+      <stop offset="50%" stop-color="#ede7da" />
+      <stop offset="100%" stop-color="#dec79b" />
+    </linearGradient>
+
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbb386" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#cbb386" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#cbb386" stop-opacity="0.45" />
+    </linearGradient>
+
+    <linearGradient id="cardPanel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14252d" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#0a1218" stop-opacity="0.94" />
+    </linearGradient>
+
+    <radialGradient id="cloudGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#80928e" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#5e777c" stop-opacity="0.09" />
+      <stop offset="100%" stop-color="#101c27" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .serif-title {
+      font-family: 'Cinzel', 'Georgia', 'Times New Roman', serif;
+      fill: #f0ebdc;
+    }
+    .serif-italic {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-style: italic;
+      fill: #dec79b;
+    }
+    .mono-kicker {
+      font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 3.5px;
+      fill: #cbb386;
+      text-transform: uppercase;
+    }
+    .mono-meta {
+      font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+      font-size: 10.5px;
+      letter-spacing: 2px;
+      fill: #9eb0b3;
+    }
+    .sans-body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      fill: #bdc7c6;
+    }
+    @keyframes driftSlow {
+      0% { transform: translateX(-18px) translateY(0px); }
+      50% { transform: translateX(22px) translateY(-6px); }
+      100% { transform: translateX(-18px) translateY(0px); }
+    }
+    @keyframes driftReverse {
+      0% { transform: translateX(20px) translateY(0px); }
+      50% { transform: translateX(-24px) translateY(5px); }
+      100% { transform: translateX(20px) translateY(0px); }
+    }
+    @keyframes sunPulse {
+      0%, 100% { opacity: 0.72; transform: scale(1); }
+      50% { opacity: 0.92; transform: scale(1.05); }
+    }
+    @keyframes flowDash {
+      to { stroke-dashoffset: -120; }
+    }
+    @keyframes nodePulse {
+      0%, 100% { r: 5px; opacity: 0.9; }
+      50% { r: 7.5px; opacity: 1; }
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes dragonGlide {
+      0%, 100% { transform: translate(0px, 0px) rotate(-10deg); }
+      50% { transform: translate(-12px, -8px) rotate(-7deg); }
+    }
+    @keyframes wingBeat {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(0.62); }
+    }
+    .cloud-1 { animation: driftSlow 18s ease-in-out infinite; }
+    .cloud-2 { animation: driftReverse 22s ease-in-out infinite; }
+    .sun-glow { animation: sunPulse 7s ease-in-out infinite; transform-origin: 830px 135px; }
+    .signal-path {
+      stroke-dasharray: 8 8;
+      animation: flowDash 6s linear infinite;
+    }
+    .float-panel { animation: floatCard 6s ease-in-out infinite; }
+    .dragon-group { animation: dragonGlide 9s ease-in-out infinite; transform-origin: 960px 85px; }
+    .dragon-wing { animation: wingBeat 1.3s ease-in-out infinite; transform-origin: 960px 85px; }
+  </style>
+
+  <!-- Base Frame -->
+  <rect width="1200" height="460" rx="10" fill="#050507" />
+  <rect width="1200" height="460" rx="10" fill="url(#skyGlow)" />
+
+  <!-- Subtle Architectural Arch & Horizon Grid -->
+  <path d="M 0 395 L 1200 395" stroke="#cbb386" stroke-opacity="0.16" stroke-width="1" />
+  <path d="M 560 460 A 380 380 0 0 1 1160 190" fill="none" stroke="#cbb386" stroke-opacity="0.09" stroke-width="1" stroke-dasharray="3 6" />
+  <path d="M 600 460 A 320 320 0 0 1 1140 240" fill="none" stroke="#cbb386" stroke-opacity="0.12" stroke-width="1" />
+
+  <!-- Glowing Atlas Sun -->
+  <g class="sun-glow">
+    <circle cx="830" cy="135" r="135" fill="url(#sunOrb)" />
+    <circle cx="830" cy="135" r="42" fill="#e3d6b0" fill-opacity="0.22" />
+    <circle cx="830" cy="135" r="3" fill="#f0ebdc" />
+    <circle cx="830" cy="135" r="58" fill="none" stroke="#dec79b" stroke-opacity="0.24" stroke-width="0.75" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Drifting Atmospheric Mist Clouds -->
+  <g class="cloud-1">
+    <ellipse cx="760" cy="190" rx="340" ry="95" fill="url(#cloudGrad)" />
+    <ellipse cx="320" cy="310" rx="290" ry="80" fill="url(#cloudGrad)" />
+  </g>
+  <g class="cloud-2">
+    <ellipse cx="950" cy="280" rx="310" ry="90" fill="url(#cloudGrad)" />
+  </g>
+
+  <!-- Constellation Stars -->
+  <g fill="#dec79b" opacity="0.55">
+    <circle cx="480" cy="78" r="1.2" />
+    <circle cx="540" cy="105" r="1" />
+    <circle cx="620" cy="64" r="1.5" />
+    <circle cx="1060" cy="72" r="1.3" />
+    <circle cx="1115" cy="110" r="1" />
+    <path d="M 480 78 L 540 105 L 620 64" fill="none" stroke="#cbb386" stroke-opacity="0.18" stroke-width="0.6" />
+  </g>
+
+  <!-- Distant Dragon Silhouette (from The Atlas Drifter gateway) -->
+  <g class="dragon-group" opacity="0.75">
+    <g class="dragon-wing">
+      <path d="M 930 88 Q 950 58 985 52 Q 972 72 968 85 Q 995 66 1022 68 Q 992 84 974 94 L 942 98 Z" fill="#cbb386" fill-opacity="0.32" />
+      <path d="M 935 88 Q 912 64 885 68 Q 908 80 924 91 Z" fill="#dec79b" fill-opacity="0.24" />
+    </g>
+    <path d="M 915 92 Q 945 86 978 90 Q 998 94 1012 104 Q 994 98 972 95 L 920 96 Z" fill="#dec79b" fill-opacity="0.5" />
+  </g>
+
+  <!-- Top Masthead -->
+  <g transform="translate(56, 40)">
+    <!-- Monogram Badge -->
+    <rect x="0" y="-16" width="36" height="24" rx="3" fill="#14252d" stroke="#cbb386" stroke-opacity="0.5" stroke-width="1" />
+    <text x="18" y="0" text-anchor="middle" class="serif-title" font-size="13" font-weight="600" letter-spacing="1">AD</text>
+    <text x="48" y="-1" class="mono-kicker" font-size="10.5">THE ATLAS DRIFTER</text>
+    <text x="235" y="-1" class="mono-meta" opacity="0.55">//  A WORLD BY VIVEK RANJAN</text>
+
+    <!-- Right Masthead Status -->
+    <g transform="translate(835, -14)">
+      <rect x="0" y="0" width="252" height="24" rx="12" fill="#101f29" stroke="#cbb386" stroke-opacity="0.35" stroke-width="1" />
+      <circle cx="16" cy="12" r="3.5" fill="#4ade80" />
+      <text x="28" y="15.5" class="mono-meta" font-size="9.5" fill="#ede7da" letter-spacing="1.5">DUBLIN, IE · STAMP 1G</text>
+    </g>
+  </g>
+  <line x1="56" y1="58" x2="1144" y2="58" stroke="#cbb386" stroke-opacity="0.16" stroke-width="1" />
+
+  <!-- Left Column: Hero Identity & Story -->
+  <g transform="translate(56, 102)">
+    <text x="0" y="0" class="mono-kicker">I · THE ARRIVAL  —  BEHIND THE BUILD</text>
+
+    <!-- Monumental Title: The Atlas Drifter. -->
+    <text x="0" y="74" class="serif-title" font-size="68" font-weight="500" letter-spacing="-1.5">The Atlas</text>
+    <text x="0" y="144" class="serif-italic" font-size="70" font-weight="400" letter-spacing="-1">Drifter.</text>
+    <text x="252" y="144" class="mono-kicker" font-size="11" opacity="0.75">VIVEK RANJAN</text>
+
+    <!-- Tagline -->
+    <text x="0" y="188" class="serif-title" font-size="21" fill="#ede7da">
+      Engineer. Builder. Explorer. <tspan class="serif-italic" font-size="20" fill="#cbb386">Every creation starts with curiosity.</tspan>
+    </text>
+
+    <!-- Bio Summary -->
+    <text x="0" y="220" class="sans-body" font-size="14" letter-spacing="0.2">
+      Senior Software Engineer (~5 yrs) building production GenAI systems, visual agentic workflows,
+    </text>
+    <text x="0" y="242" class="sans-body" font-size="14" letter-spacing="0.2">
+      native C++17 / Python runtimes, and cloud-scale AWS &amp; Snowflake data platforms (10M+ records).
+    </text>
+
+    <!-- Key Highlight Pills -->
+    <g transform="translate(0, 260)">
+      <rect x="0" y="0" width="186" height="24" rx="4" fill="#14252d" stroke="#cbb386" stroke-opacity="0.4" />
+      <text x="93" y="15.5" text-anchor="middle" class="mono-meta" font-size="9.5" fill="#dec79b">✧ M.ENG AI · 1ST CLASS HONS</text>
+
+      <rect x="198" y="0" width="210" height="24" rx="4" fill="#14252d" stroke="#cbb386" stroke-opacity="0.4" />
+      <text x="303" y="15.5" text-anchor="middle" class="mono-meta" font-size="9.5" fill="#ede7da">📦 PYPI: GRAPHCORE &amp; ASTRAPDF</text>
+
+      <rect x="420" y="0" width="190" height="24" rx="4" fill="#14252d" stroke="#cbb386" stroke-opacity="0.4" />
+      <text x="515" y="15.5" text-anchor="middle" class="mono-meta" font-size="9.5" fill="#dec79b">🏆 2× ELI LILLY RISE AWARD</text>
+    </g>
+  </g>
+
+  <!-- Right Column: "AN IDEA, TAKING SHAPE" Interactive Workshop Card (from atlasdrifter.com) -->
+  <g class="float-panel" transform="translate(715, 92)">
+    <!-- Outer Glass Card -->
+    <rect x="0" y="0" width="428" height="272" rx="6" fill="url(#cardPanel)" stroke="url(#goldBorder)" stroke-width="1.2" />
+
+    <!-- Card Header -->
+    <text x="22" y="28" class="mono-kicker" font-size="9.5" letter-spacing="2.8">01 / AN IDEA, TAKING SHAPE</text>
+    <text x="406" y="28" text-anchor="end" class="mono-meta" font-size="9" fill="#cbb386">C++17 · PYTHON · RAG</text>
+    <line x1="22" y1="40" x2="406" y2="40" stroke="#cbb386" stroke-opacity="0.2" stroke-width="1" />
+
+    <!-- Agentic Graph Schematic (exact motif from journey-drawing) -->
+    <g transform="translate(14, 48)">
+      <!-- Base schematic lines -->
+      <path d="M 30 68 H 125 M 165 68 H 235 M 275 68 H 370 M 145 48 V 16 H 255 V 48 M 145 88 V 120 H 255 V 88"
+            fill="none" stroke="#cbb386" stroke-opacity="0.28" stroke-width="1.4" />
+      <!-- Animated pulse overlay -->
+      <path class="signal-path" d="M 30 68 H 125 M 165 68 H 235 M 275 68 H 370 M 145 48 V 16 H 255 V 48 M 145 88 V 120 H 255 V 88"
+            fill="none" stroke="#dec79b" stroke-opacity="0.9" stroke-width="1.6" />
+
+      <!-- Graph Nodes -->
+      <circle cx="30" cy="68" r="6" fill="#101f29" stroke="#cbb386" stroke-width="1.8" />
+      <circle cx="145" cy="68" r="20" fill="#14252d" stroke="#dec79b" stroke-width="1.6" />
+      <text x="145" y="71.5" text-anchor="middle" class="mono-meta" font-size="8.5" fill="#ede7da">AGENT</text>
+
+      <circle cx="255" cy="68" r="20" fill="#14252d" stroke="#dec79b" stroke-width="1.6" />
+      <text x="255" y="71.5" text-anchor="middle" class="mono-meta" font-size="8.5" fill="#ede7da">ENGINE</text>
+
+      <circle cx="370" cy="68" r="6" fill="#cbb386" />
+
+      <!-- Top & Bottom Branch Labels -->
+      <rect x="165" y="4" width="70" height="18" rx="3" fill="#0d1820" stroke="#cbb386" stroke-opacity="0.4" />
+      <text x="200" y="16" text-anchor="middle" class="mono-meta" font-size="8" fill="#cbb386">GUARDRAILS</text>
+
+      <rect x="160" y="110" width="80" height="18" rx="3" fill="#0d1820" stroke="#cbb386" stroke-opacity="0.4" />
+      <text x="200" y="122" text-anchor="middle" class="mono-meta" font-size="8" fill="#cbb386">CHECKPOINTS</text>
+    </g>
+
+    <!-- Divider inside card -->
+    <line x1="22" y1="190" x2="406" y2="190" stroke="#cbb386" stroke-opacity="0.18" stroke-width="1" />
+
+    <!-- Bottom Row inside Card: Fanned Playing Cards ("02 / THE GAME TABLE") -->
+    <text x="22" y="214" class="mono-kicker" font-size="9.5">02 / THE GAME TABLE</text>
+    <text x="22" y="234" class="serif-italic" font-size="15" fill="#ede7da">“Your people. One more hand.”</text>
+    <text x="22" y="253" class="mono-meta" font-size="9.5" fill="#9eb0b3">4 LIVE MULTIPLAYER GAMES</text>
+
+    <!-- 4 Mini Suit Badges (♦ D, ♠ 29, ● S, ♣ T) -->
+    <g transform="translate(244, 204)">
+      <rect x="0" y="0" width="36" height="48" rx="4" fill="#315448" stroke="#cbb386" stroke-opacity="0.55" />
+      <text x="18" y="18" text-anchor="middle" class="mono-meta" font-size="9" fill="#ede7da">D</text>
+      <text x="18" y="37" text-anchor="middle" class="serif-title" font-size="16" fill="#dec79b">♦</text>
+
+      <rect x="44" y="0" width="36" height="48" rx="4" fill="#354d64" stroke="#cbb386" stroke-opacity="0.55" />
+      <text x="62" y="18" text-anchor="middle" class="mono-meta" font-size="9" fill="#ede7da">29</text>
+      <text x="62" y="37" text-anchor="middle" class="serif-title" font-size="16" fill="#dec79b">♠</text>
+
+      <rect x="88" y="0" width="36" height="48" rx="4" fill="#58415d" stroke="#cbb386" stroke-opacity="0.55" />
+      <text x="106" y="18" text-anchor="middle" class="mono-meta" font-size="9" fill="#ede7da">SEQ</text>
+      <text x="106" y="37" text-anchor="middle" class="serif-title" font-size="15" fill="#dec79b">●</text>
+
+      <rect x="132" y="0" width="36" height="48" rx="4" fill="#6a4435" stroke="#cbb386" stroke-opacity="0.55" />
+      <text x="150" y="18" text-anchor="middle" class="mono-meta" font-size="9" fill="#ede7da">T</text>
+      <text x="150" y="37" text-anchor="middle" class="serif-title" font-size="16" fill="#dec79b">♣</text>
+    </g>
+  </g>
+
+  <!-- Bottom Chapter Progress Footer (from journey-footer) -->
+  <g transform="translate(56, 424)">
+    <text x="0" y="0" class="mono-kicker" font-size="10">I · THE ARRIVAL</text>
+    <text x="165" y="0" class="mono-meta" font-size="10" opacity="0.65">II · THE CURIOSITY</text>
+    <text x="355" y="0" class="mono-meta" font-size="10" opacity="0.65">III · THE WORKSHOP</text>
+    <text x="545" y="0" class="mono-meta" font-size="10" opacity="0.65">IV · THE GATHERING</text>
+
+    <!-- Progress track -->
+    <rect x="740" y="-7" width="180" height="3" rx="1.5" fill="#1e313b" />
+    <rect x="740" y="-7" width="125" height="3" rx="1.5" fill="url(#goldGrad)" />
+
+    <text x="1088" y="0" text-anchor="end" class="mono-kicker" font-size="10">ATLASDRIFTER.COM ↗</text>
+  </g>
+
+  <!-- Outer Subtle Gold Frame -->
+  <rect x="1" y="1" width="1198" height="458" rx="10" fill="none" stroke="url(#goldBorder)" stroke-width="1.5" />
+</svg>

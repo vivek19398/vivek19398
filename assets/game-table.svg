@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 290" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tableBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091116" />
+      <stop offset="100%" stop-color="#050507" />
+    </linearGradient>
+
+    <linearGradient id="jadeCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#315448" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#13241e" stop-opacity="0.96" />
+    </linearGradient>
+
+    <linearGradient id="iceCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#354d64" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#14202c" stop-opacity="0.96" />
+    </linearGradient>
+
+    <linearGradient id="plumCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58415d" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#231826" stop-opacity="0.96" />
+    </linearGradient>
+
+    <linearGradient id="emberCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6a4435" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#291913" stop-opacity="0.96" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .serif-card {
+      font-family: 'Cinzel', 'Georgia', 'Times New Roman', serif;
+      fill: #f0ebdc;
+    }
+    .serif-ital {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-style: italic;
+      fill: #dec79b;
+    }
+    .mono-kicker {
+      font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+      letter-spacing: 2.2px;
+      fill: #cbb386;
+      text-transform: uppercase;
+    }
+    .sans-copy {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      fill: #d8d3c8;
+    }
+    @keyframes hover1 {
+      0%, 100% { transform: translate(36px, 66px) translateY(0px); }
+      50% { transform: translate(36px, 66px) translateY(-5px); }
+    }
+    @keyframes hover2 {
+      0%, 100% { transform: translate(324px, 66px) translateY(-4px); }
+      50% { transform: translate(324px, 66px) translateY(2px); }
+    }
+    @keyframes hover3 {
+      0%, 100% { transform: translate(612px, 66px) translateY(0px); }
+      50% { transform: translate(612px, 66px) translateY(-5px); }
+    }
+    @keyframes hover4 {
+      0%, 100% { transform: translate(900px, 66px) translateY(-4px); }
+      50% { transform: translate(900px, 66px) translateY(2px); }
+    }
+    .c1 { animation: hover1 5.5s ease-in-out infinite; }
+    .c2 { animation: hover2 6.0s ease-in-out infinite; }
+    .c3 { animation: hover3 5.8s ease-in-out infinite; }
+    .c4 { animation: hover4 6.3s ease-in-out infinite; }
+  </style>
+
+  <!-- Outer Frame -->
+  <rect width="1200" height="290" rx="8" fill="url(#tableBg)" stroke="#cbb386" stroke-opacity="0.35" stroke-width="1.2" />
+
+  <!-- Top Header -->
+  <g transform="translate(36, 32)">
+    <text x="0" y="0" class="mono-kicker" font-size="10">02 / THE GAME TABLE  —  GOOD COMPANY. GREAT RIVALRIES.</text>
+    <text x="1128" y="0" text-anchor="end" class="serif-ital" font-size="14">“Your people. One more hand.”</text>
+    <line x1="0" y1="12" x2="1128" y2="12" stroke="#cbb386" stroke-opacity="0.18" stroke-width="1" />
+  </g>
+
+  <!-- CARD 01: DEALZ (Jade #315448) -->
+  <g class="c1" transform="translate(36, 66)">
+    <rect width="264" height="196" rx="6" fill="url(#jadeCard)" stroke="#cbb386" stroke-opacity="0.5" stroke-width="1.1" />
+    <text x="20" y="30" class="mono-kicker" font-size="9.5">01 · THE ART OF THE DEAL</text>
+    <text x="242" y="34" text-anchor="end" class="serif-card" font-size="24" fill="#dec79b">♦</text>
+
+    <text x="20" y="72" class="serif-card" font-size="26">Dealz</text>
+    <text x="20" y="100" class="serif-ital" font-size="13.5" fill="#ede7da">“Big deals. Little cards. Your people.”</text>
+
+    <line x1="20" y1="146" x2="244" y2="146" stroke="#cbb386" stroke-opacity="0.25" />
+    <text x="20" y="170" class="mono-kicker" font-size="8.5" fill="#d5bc8a">2–5 PLAYERS · MULTIPLAYER</text>
+    <text x="244" y="170" text-anchor="end" class="mono-kicker" font-size="8.5" fill="#ede7da">LIVE ↗</text>
+  </g>
+
+  <!-- CARD 02: TWENTY-NINE (Ice #354d64) -->
+  <g class="c2" transform="translate(324, 66)">
+    <rect width="264" height="196" rx="6" fill="url(#iceCard)" stroke="#cbb386" stroke-opacity="0.5" stroke-width="1.1" />
+    <text x="20" y="30" class="mono-kicker" font-size="9.5">02 · EVERY TRICK COUNTS</text>
+    <text x="242" y="34" text-anchor="end" class="serif-card" font-size="24" fill="#dec79b">♠</text>
+
+    <text x="20" y="72" class="serif-card" font-size="26">Twenty-Nine</text>
+    <text x="20" y="100" class="serif-ital" font-size="13.5" fill="#ede7da">“Four players. Two teams. One winning hand.”</text>
+
+    <line x1="20" y1="146" x2="244" y2="146" stroke="#cbb386" stroke-opacity="0.25" />
+    <text x="20" y="170" class="mono-kicker" font-size="8.5" fill="#d5bc8a">4 PLAYERS · TEAM TRICK-TAKING</text>
+    <text x="244" y="170" text-anchor="end" class="mono-kicker" font-size="8.5" fill="#ede7da">LIVE ↗</text>
+  </g>
+
+  <!-- CARD 03: SEQUENCE (Plum #58415d) -->
+  <g class="c3" transform="translate(612, 66)">
+    <rect width="264" height="196" rx="6" fill="url(#plumCard)" stroke="#cbb386" stroke-opacity="0.5" stroke-width="1.1" />
+    <text x="20" y="30" class="mono-kicker" font-size="9.5">03 · THINK A MOVE AHEAD</text>
+    <text x="242" y="34" text-anchor="end" class="serif-card" font-size="22" fill="#dec79b">●</text>
+
+    <text x="20" y="72" class="serif-card" font-size="26">Sequence</text>
+    <text x="20" y="100" class="serif-ital" font-size="13.5" fill="#ede7da">“A shared screen. A little strategy.”</text>
+
+    <line x1="20" y1="146" x2="244" y2="146" stroke="#cbb386" stroke-opacity="0.25" />
+    <text x="20" y="170" class="mono-kicker" font-size="8.5" fill="#d5bc8a">AI BOT · LOCAL 2-PLAYER</text>
+    <text x="244" y="170" text-anchor="end" class="mono-kicker" font-size="8.5" fill="#ede7da">LIVE ↗</text>
+  </g>
+
+  <!-- CARD 04: BHABHI / TULLA (Ember #6a4435) -->
+  <g class="c4" transform="translate(900, 66)">
+    <rect width="264" height="196" rx="6" fill="url(#emberCard)" stroke="#cbb386" stroke-opacity="0.5" stroke-width="1.1" />
+    <text x="20" y="30" class="mono-kicker" font-size="9.5">04 · THE LAST HAND</text>
+    <text x="242" y="34" text-anchor="end" class="serif-card" font-size="24" fill="#dec79b">♣</text>
+
+    <text x="20" y="72" class="serif-card" font-size="25">Bhabhi / Tulla</text>
+    <text x="20" y="100" class="serif-ital" font-size="13.5" fill="#ede7da">“A familiar game. Your private table.”</text>
+
+    <line x1="20" y1="146" x2="244" y2="146" stroke="#cbb386" stroke-opacity="0.25" />
+    <text x="20" y="170" class="mono-kicker" font-size="8.5" fill="#d5bc8a">3–8 PLAYERS · INVITE CODES</text>
+    <text x="244" y="170" text-anchor="end" class="mono-kicker" font-size="8.5" fill="#ede7da">LIVE ↗</text>
+  </g>
+</svg>
